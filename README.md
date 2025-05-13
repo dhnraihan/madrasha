@@ -47,7 +47,7 @@
 ## প্রযুক্তি
 
 - HTML5
-- CSS3
+- Tailwind CSS
 - JavaScript (ES6)
 
 ## ব্যবহার
