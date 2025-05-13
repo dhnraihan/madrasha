@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>যোগাযোগ - আমাদের মাদ্রাসা</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#005e54',
+                        secondary: '#d4a017',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google Fonts - Hind Siliguri -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-['Hind_Siliguri']">
+    <header class="bg-primary text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="logo">
+                <h1 class="text-2xl font-bold">আমাদের মাদ্রাসা</h1>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-secondary font-medium">হোম</a></li>
+                    <li><a href="about.html" class="hover:text-secondary font-medium">আমাদের ইতিহাস</a></li>
+                    <li><a href="gallery.html" class="hover:text-secondary font-medium">গ্যালারি</a></li>
+                    <li><a href="admission.html" class="hover:text-secondary font-medium">ভর্তি তথ্য</a></li>
+                    <li><a href="teachers.html" class="hover:text-secondary font-medium">শিক্ষকবৃন্দ</a></li>
+                    <li><a href="contact.html" class="active text-secondary font-medium">যোগাযোগ</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden bg-primary/95 w-full absolute top-[72px] left-0 p-4 shadow-lg md:hidden">
+            <ul class="space-y-4">
+                <li><a href="index.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">হোম</a></li>
+                <li><a href="about.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">আমাদের ইতিহাস</a></li>
+                <li><a href="gallery.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">গ্যালারি</a></li>
+                <li><a href="admission.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">ভর্তি তথ্য</a></li>
+                <li><a href="teachers.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">শিক্ষকবৃন্দ</a></li>
+                <li><a href="contact.html" class="block py-2 px-4 bg-primary/50 rounded text-secondary font-medium">যোগাযোগ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="bg-cover bg-center py-12" style="background-image: url('assets/images/bg.jpg');">
+        <div class="bg-gray-500 bg-opacity-25 backdrop-blur-sm container mx-auto px-4 w-full py-2 rounded-lg shadow-lg">
+            <h2 class="text-4xl text-white font-bold text-center text-primary mb-6">যোগাযোগ</h2>
+            <p class="text-center text-white max-w-2xl mx-auto mb-8">
+                আমাদের সাথে যোগাযোগ করতে নিচের যেকোনো মাধ্যম ব্যবহার করতে পারেন। আমরা সর্বদা আপনাদের সেবায় প্রস্তুত আছি।
+            </p>
+            <!-- ফর্ম বা অন্যান্য কনটেন্ট এখানে আসবে -->
+        </div>
+    </div>
+    
+
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
+                <div>
+                    <div class="bg-white p-8 rounded-xl shadow-md h-full">
+                        <h3 class="text-2xl font-bold text-primary mb-8">যোগাযোগের ঠিকানা</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-primary text-white p-3 rounded-lg mr-4">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800">ঠিকানা</h4>
+                                    <p class="text-gray-600">পুনসহি কালিয়া পাড়ারা, ঢাকা গাজীপুর, বাংলাদেশ</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary text-white p-3 rounded-lg mr-4">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800">ফোন</h4>
+                                    <p class="text-gray-600">০১৭১২৩৪৫৬৭৮</p>
+                                    <p class="text-gray-600">০১৮১২৩৪৫৬৭৮</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary text-white p-3 rounded-lg mr-4">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800">ইমেইল</h4>
+                                    <p class="text-gray-600">info@amadarmadrasa.edu.bd</p>
+                                    <p class="text-gray-600">admission@amadarmadrasa.edu.bd</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary text-white p-3 rounded-lg mr-4">
+                                    <i class="fas fa-clock text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800">অফিস সময়</h4>
+                                    <p class="text-gray-600">শনিবার - বৃহস্পতিবার: সকাল ৮টা - বিকাল ৪টা</p>
+                                    <p class="text-gray-600">শুক্রবার: বন্ধ</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <h3 class="text-xl font-bold text-primary mb-4">সামাজিক যোগাযোগ মাধ্যম</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-[#1877F2] text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition flex items-center">
+                                    <i class="fab fa-facebook-f mr-2"></i> ফেসবুক
+                                </a>
+                                <a href="#" class="bg-[#FF0000] text-white px-4 py-2 rounded-lg hover:bg-red-600 transition flex items-center">
+                                    <i class="fab fa-youtube mr-2"></i> ইউটিউব
+                                </a>
+                                <a href="#" class="bg-[#C13584] text-white px-4 py-2 rounded-lg hover:bg-pink-600 transition flex items-center">
+                                    <i class="fab fa-instagram mr-2"></i> ইনস্টাগ্রাম
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-bold text-primary mb-6">আমাদের মেসেজ পাঠান</h3>
+                        <form id="contactForm" class="space-y-5">
+                            <div class="form-group">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">আপনার নাম</label>
+                                <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">ইমেইল</label>
+                                <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">মোবাইল নম্বর</label>
+                                <input type="tel" id="phone" name="phone" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">বিষয়</label>
+                                <input type="text" id="subject" name="subject" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">মেসেজ</label>
+                                <textarea id="message" name="message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">পাঠান</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-primary mb-6 text-center">আমাদের অবস্থান</h3>
+                <div class="rounded-xl overflow-hidden shadow-md">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1248.6481327746667!2d90.50972957836812!3d23.993929898296305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sbd!4v1747094703739!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-bold text-primary mb-8 text-center">সাধারণ জিজ্ঞাসা</h3>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <button class="faq-btn w-full text-left p-4 bg-gray-50 hover:bg-gray-100 focus:outline-none transition flex justify-between items-center">
+                            <span class="text-lg font-medium text-gray-800">আপনাদের মাদ্রাসায় ছাত্রীদের জন্য আবাসিক সুবিধা আছে কি?</span>
+                            <span class="toggle-icon text-primary text-xl">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </button>
+                        <div class="faq-answer hidden p-4 bg-white">
+                            <p class="text-gray-700">হ্যাঁ, আমাদের মাদ্রাসায় ছাত্র এবং ছাত্রী উভয়ের জন্য পৃথক আবাসিক সুবিধা রয়েছে।</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <button class="faq-btn w-full text-left p-4 bg-gray-50 hover:bg-gray-100 focus:outline-none transition flex justify-between items-center">
+                            <span class="text-lg font-medium text-gray-800">বছরের যে কোনো সময় কি ভর্তি নেওয়া হয়?</span>
+                            <span class="toggle-icon text-primary text-xl">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </button>
+                        <div class="faq-answer hidden p-4 bg-white">
+                            <p class="text-gray-700">না, সাধারণত আমরা বছরে দুই বার ভর্তি নিয়ে থাকি - জানুয়ারি এবং জুলাই মাসে।</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <button class="faq-btn w-full text-left p-4 bg-gray-50 hover:bg-gray-100 focus:outline-none transition flex justify-between items-center">
+                            <span class="text-lg font-medium text-gray-800">আপনাদের মাদ্রাসা কি সরকার স্বীকৃত?</span>
+                            <span class="toggle-icon text-primary text-xl">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </button>
+                        <div class="faq-answer hidden p-4 bg-white">
+                            <p class="text-gray-700">হ্যাঁ, আমাদের মাদ্রাসা সরকার স্বীকৃত এবং বাংলাদেশ মাদ্রাসা শিক্ষা বোর্ডের অধীনে পরিচালিত।</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <button class="faq-btn w-full text-left p-4 bg-gray-50 hover:bg-gray-100 focus:outline-none transition flex justify-between items-center">
+                            <span class="text-lg font-medium text-gray-800">মাদ্রাসায় পড়াশোনার পাশাপাশি খেলাধুলার ব্যবস্থা আছে কি?</span>
+                            <span class="toggle-icon text-primary text-xl">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </button>
+                        <div class="faq-answer hidden p-4 bg-white">
+                            <p class="text-gray-700">হ্যাঁ, আমরা ছাত্রদের সুষম বিকাশের জন্য ক্রিকেট, ফুটবল, ব্যাডমিন্টনসহ বিভিন্ন খেলাধুলার ব্যবস্থা রেখেছি।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white pt-16 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">আমাদের মাদ্রাসা</h3>
+                    <p class="mb-4">একটি আধুনিক ইসলামিক শিক্ষা প্রতিষ্ঠান যেখানে ধর্মীয় ও আধুনিক শিক্ষা একসাথে প্রদান করা হয়।</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-secondary"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-secondary"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-white hover:text-secondary"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">যোগাযোগ</h3>
+                    <p class="flex items-start mb-2">
+                        <i class="fas fa-map-marker-alt mr-3 mt-1"></i>
+                        <span>ঠিকানা: পুনসহি কালিয়া পাড়ারা, ঢাকা গাজীপুর, বাংলাদেশ</span>
+                    </p>
+                    <p class="flex items-center mb-2">
+                        <i class="fas fa-phone-alt mr-3"></i>
+                        <span>ফোন: ০১৭১২৩৪৫৬৭৮</span>
+                    </p>
+                    <p class="flex items-center mb-2">
+                        <i class="fas fa-envelope mr-3"></i>
+                        <span>ইমেইল: info@amadarmadrasa.edu.bd</span>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">দ্রুত লিঙ্ক</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-secondary flex items-center"><i class="fas fa-chevron-right mr-2 text-sm"></i> হোম</a></li>
+                        <li><a href="about.html" class="hover:text-secondary flex items-center"><i class="fas fa-chevron-right mr-2 text-sm"></i> আমাদের ইতিহাস</a></li>
+                        <li><a href="admission.html" class="hover:text-secondary flex items-center"><i class="fas fa-chevron-right mr-2 text-sm"></i> ভর্তি তথ্য</a></li>
+                        <li><a href="contact.html" class="hover:text-secondary flex items-center"><i class="fas fa-chevron-right mr-2 text-sm"></i> যোগাযোগ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center">
+                <p>&copy; ২০২৫ আমাদের মাদ্রাসা। সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqButtons = document.querySelectorAll('.faq-btn');
+            
+            faqButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('.toggle-icon i');
+                    
+                    // Toggle current answer
+                    answer.classList.toggle('hidden');
+                    
+                    // Toggle icon
+                    if (answer.classList.contains('hidden')) {
+                        icon.classList.remove('fa-minus');
+                        icon.classList.add('fa-plus');
+                    } else {
+                        icon.classList.remove('fa-plus');
+                        icon.classList.add('fa-minus');
+                    }
+                });
+            });
+            
+            // Mobile Menu Toggle
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                // Change icon based on menu state
+                const icon = menuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

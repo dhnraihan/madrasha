@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ভর্তি তথ্য - আমাদের মাদ্রাসা</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#005e54',
+                        secondary: '#d4a017',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google Fonts - Hind Siliguri -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-['Hind_Siliguri']">
+    <header class="bg-primary text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="logo">
+                <h1 class="text-2xl font-bold">আমাদের মাদ্রাসা</h1>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-secondary font-medium">হোম</a></li>
+                    <li><a href="about.html" class="hover:text-secondary font-medium">আমাদের ইতিহাস</a></li>
+                    <li><a href="gallery.html" class="hover:text-secondary font-medium">গ্যালারি</a></li>
+                    <li><a href="admission.html" class="active text-secondary font-medium">ভর্তি তথ্য</a></li>
+                    <li><a href="teachers.html" class="hover:text-secondary font-medium">শিক্ষকবৃন্দ</a></li>
+                    <li><a href="contact.html" class="hover:text-secondary font-medium">যোগাযোগ</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden bg-primary/95 w-full absolute top-[72px] left-0 p-4 shadow-lg md:hidden">
+            <ul class="space-y-4">
+                <li><a href="index.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">হোম</a></li>
+                <li><a href="about.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">আমাদের ইতিহাস</a></li>
+                <li><a href="gallery.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">গ্যালারি</a></li>
+                <li><a href="admission.html" class="block py-2 px-4 bg-primary/50 rounded text-secondary font-medium">ভর্তি তথ্য</a></li>
+                <li><a href="teachers.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">শিক্ষকবৃন্দ</a></li>
+                <li><a href="contact.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">যোগাযোগ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="bg-cover bg-center py-12" style="background-image: url('assets/images/bg.jpg');">
+        <div class="bg-gray-500 bg-opacity-25 backdrop-blur-sm container mx-auto px-4 w-full py-2 rounded-lg shadow-lg">
+            <h2 class="text-4xl font-bold text-white text-center text-primary mb-6">ভর্তি তথ্য</h2>
+            <p class="text-center text-white max-w-2xl mx-auto mb-8">আমাদের মাদ্রাসায় ভর্তির জন্য প্রয়োজনীয় সকল তথ্য এবং নির্দেশনা এখানে দেওয়া হয়েছে। সম্পূর্ণ প্রক্রিয়ার জন্য অনুগ্রহ করে নিচের তথ্যগুলো মনোযোগ সহকারে পড়ুন।</p>
+        </div>
+    </div>
+
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="bg-white p-8 rounded-xl shadow-md mb-12">
+                <h3 class="text-2xl font-bold text-primary mb-6 flex items-center">
+                    <i class="fas fa-tasks text-secondary mr-3"></i>
+                    ভর্তি প্রক্রিয়া
+                </h3>
+                <p class="text-gray-700 mb-4">আমাদের মাদ্রাসায় ভর্তির জন্য নিম্নলিখিত প্রক্রিয়া অনুসরণ করতে হবে:</p>
+                <ol class="list-decimal list-inside space-y-3 pl-4 text-gray-700">
+                    <li class="flex items-start">
+                        <span class="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center mr-3 flex-shrink-0 mt-0.5">১</span>
+                        <span>অনলাইন ফরম পূরণ করুন অথবা সরাসরি আমাদের অফিস থেকে ফরম সংগ্রহ করুন।</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center mr-3 flex-shrink-0 mt-0.5">২</span>
+                        <span>প্রয়োজনীয় কাগজপত্র জমা দিন।</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center mr-3 flex-shrink-0 mt-0.5">৩</span>
+                        <span>ভর্তি পরীক্ষায় অংশগ্রহণ করুন।</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center mr-3 flex-shrink-0 mt-0.5">৪</span>
+                        <span>মৌখিক পরীক্ষায় অংশগ্রহণ করুন।</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center mr-3 flex-shrink-0 mt-0.5">৫</span>
+                        <span>ফলাফল প্রকাশের পর ভর্তি ফি জমা দিন।</span>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-md mb-12">
+                <h3 class="text-2xl font-bold text-primary mb-6 flex items-center">
+                    <i class="fas fa-file-alt text-secondary mr-3"></i>
+                    প্রয়োজনীয় কাগজপত্র
+                </h3>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-primary mr-3"></i>
+                        <span>ছাত্র/ছাত্রীর জন্ম নিবন্ধন/এন.আই.ডি কার্ডের ফটোকপি</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-primary mr-3"></i>
+                        <span>পাসপোর্ট সাইজের ৪ কপি রঙিন ছবি</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-primary mr-3"></i>
+                        <span>পিতা-মাতার এন.আই.ডি কার্ডের ফটোকপি</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-primary mr-3"></i>
+                        <span>সর্বশেষ শিক্ষাগত যোগ্যতার সনদপত্র</span>
+                    </li>
+                </ul>
+            </div>
+
+            <h3 class="text-2xl font-bold text-primary mb-8 flex items-center justify-center">
+                <i class="fas fa-book-open text-secondary mr-3"></i>
+                শিক্ষা বিভাগসমূহ
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-primary hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-quran text-3xl text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-primary text-center mb-4">হিফজ বিভাগ</h4>
+                    <p class="text-gray-700 text-center mb-4">এই বিভাগে কুরআন শরীফ হিফজ করানো হয়। ৫ বছর মেয়াদি এই কোর্সে ভর্তির জন্য নূন্যতম বয়স ৬ বছর।</p>
+                    <div class="text-center">
+                        <a href="#admission-form" class="inline-block bg-primary hover:bg-secondary text-white py-2 px-4 rounded-lg transition duration-300">ভর্তির জন্য আবেদন করুন</a>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-primary hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-book text-3xl text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-primary text-center mb-4">ইবতেদায়ী বিভাগ</h4>
+                    <p class="text-gray-700 text-center mb-4">এই বিভাগে প্রাথমিক ইসলামি শিক্ষা প্রদান করা হয়। ৫ বছর মেয়াদি এই কোর্সে ভর্তির জন্য নূন্যতম বয়স ৬ বছর।</p>
+                    <div class="text-center">
+                        <a href="#admission-form" class="inline-block bg-primary hover:bg-secondary text-white py-2 px-4 rounded-lg transition duration-300">ভর্তির জন্য আবেদন করুন</a>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-primary hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-graduation-cap text-3xl text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-primary text-center mb-4">দাখিল বিভাগ</h4>
+                    <p class="text-gray-700 text-center mb-4">এই বিভাগে মাধ্যমিক পর্যায়ের ইসলামি শিক্ষা প্রদান করা হয়। ৫ বছর মেয়াদি এই কোর্সে ভর্তির জন্য নূন্যতম বয়স ১২ বছর।</p>
+                    <div class="text-center">
+                        <a href="#admission-form" class="inline-block bg-primary hover:bg-secondary text-white py-2 px-4 rounded-lg transition duration-300">ভর্তির জন্য আবেদন করুন</a>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-primary hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-award text-3xl text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-primary text-center mb-4">আলিম বিভাগ</h4>
+                    <p class="text-gray-700 text-center mb-4">এই বিভাগে উচ্চ মাধ্যমিক পর্যায়ের ইসলামি শিক্ষা প্রদান করা হয়। ২ বছর মেয়াদি এই কোর্সে ভর্তির জন্য দাখিল/এসএসসি পাস করতে হবে।</p>
+                    <div class="text-center">
+                        <a href="#admission-form" class="inline-block bg-primary hover:bg-secondary text-white py-2 px-4 rounded-lg transition duration-300">ভর্তির জন্য আবেদন করুন</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-md mb-16">
+                <h3 class="text-2xl font-bold text-primary mb-6 flex items-center">
+                    <i class="fas fa-hand-holding-usd text-secondary mr-3"></i>
+                    ফি সংক্রান্ত তথ্য
+                </h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse text-gray-700">
+                        <thead>
+                            <tr class="bg-primary text-white">
+                                <th class="border-2 border-gray-200 p-3 text-left">বিভাগ</th>
+                                <th class="border-2 border-gray-200 p-3 text-center">ভর্তি ফি</th>
+                                <th class="border-2 border-gray-200 p-3 text-center">মাসিক বেতন</th>
+                                <th class="border-2 border-gray-200 p-3 text-center">অন্যান্য ফি</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border-2 border-gray-200 p-3 font-medium">হিফজ বিভাগ</td>
+                                <td class="border-2 border-gray-200 p-3 text-center">৫,০০০ টাকা</td>
+                                <td class="border-2 border-gray-200 p-3 text-center">১,৫০০ টাকা</td>
+                                <td class="border-2 border-gray-200 p-3 text-center">১,০০০ টাকা</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border-2 border-gray-200 p-3 font-medium">ইবতেদায়ী বিভাগ</td>
+                                <td class="border-2 border-gray-200 p-3 text-center">৪,০০০ টাকা</td>
+                                <td class="border-2 border-gray-200 p-3 text-center">১,২০০ টাকা</td>
+                                <td class="border-2 border-gray-200 p-3 text-center">১,০০০ টাকা</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border-2 border-gray-200 p-3 font-medium">দাখিল বিভাগ</td>
+                                <td class="border-2 border-gray-200 p-3 text-center">৬,০০০ টাকা</td>
+                                <td class="border-2 border-gray-200 p-3 text-center">১,৮০০ টাকা</td>
+                                <td class="border-2 border-gray-200 p-3 text-center">১,২০০ টাকা</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border-2 border-gray-200 p-3 font-medium">আলিম বিভাগ</td>
+                                <td class="border-2 border-gray-200 p-3 text-center">৮,০০০ টাকা</td>
+                                <td class="border-2 border-gray-200 p-3 text-center">২,০০০ টাকা</td>
+                                <td class="border-2 border-gray-200 p-3 text-center">১,৫০০ টাকা</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-4 text-gray-700 flex items-center">
+                    <i class="fas fa-info-circle text-secondary mr-2"></i>
+                    <span>মেধাবী ও অসচ্ছল ছাত্র-ছাত্রীদের জন্য বিশেষ বৃত্তির ব্যবস্থা রয়েছে।</span>
+                </p>
+            </div>
+
+            <div id="admission-form" class="bg-primary/5 p-8 rounded-xl shadow-md">
+                <h3 class="text-2xl font-bold text-primary mb-6 flex items-center">
+                    <i class="fas fa-edit text-secondary mr-3"></i>
+                    অনলাইন ভর্তি ফরম
+                </h3>
+                <form id="admissionForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="form-group">
+                        <label for="studentName" class="block text-gray-700 font-medium mb-2">ছাত্র/ছাত্রীর নাম</label>
+                        <input type="text" id="studentName" name="studentName" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fatherName" class="block text-gray-700 font-medium mb-2">পিতার নাম</label>
+                        <input type="text" id="fatherName" name="fatherName" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="motherName" class="block text-gray-700 font-medium mb-2">মাতার নাম</label>
+                        <input type="text" id="motherName" name="motherName" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob" class="block text-gray-700 font-medium mb-2">জন্ম তারিখ</label>
+                        <input type="date" id="dob" name="dob" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" required>
+                    </div>
+                    <div class="form-group md:col-span-2">
+                        <label for="address" class="block text-gray-700 font-medium mb-2">ঠিকানা</label>
+                        <textarea id="address" name="address" rows="3" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="block text-gray-700 font-medium mb-2">মোবাইল নম্বর</label>
+                        <input type="tel" id="phone" name="phone" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="block text-gray-700 font-medium mb-2">ইমেইল (যদি থাকে)</label>
+                        <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                    </div>
+                    <div class="form-group">
+                        <label for="department" class="block text-gray-700 font-medium mb-2">বিভাগ</label>
+                        <select id="department" name="department" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" required>
+                            <option value="">বিভাগ নির্বাচন করুন</option>
+                            <option value="hifz">হিফজ বিভাগ</option>
+                            <option value="ibtedayi">ইবতেদায়ী বিভাগ</option>
+                            <option value="dakhil">দাখিল বিভাগ</option>
+                            <option value="alim">আলিম বিভাগ</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="previousEducation" class="block text-gray-700 font-medium mb-2">পূর্ববর্তী শিক্ষাগত যোগ্যতা (যদি থাকে)</label>
+                        <input type="text" id="previousEducation" name="previousEducation" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                    </div>
+                    <div class="md:col-span-2 text-center">
+                        <button type="submit" class="bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">আবেদন করুন</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white pt-16 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">আমাদের মাদ্রাসা</h3>
+                    <p class="mb-4">একটি আধুনিক ইসলামিক শিক্ষা প্রতিষ্ঠান যেখানে ধর্মীয় ও আধুনিক শিক্ষা একসাথে প্রদান করা হয়।</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-secondary"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-secondary"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-white hover:text-secondary"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">যোগাযোগ</h3>
+                    <p class="flex items-start mb-2">
+                        <i class="fas fa-map-marker-alt mr-3 mt-1"></i>
+                        <span>ঠিকানা: পুনসহি কালিয়া পাড়ারা, ঢাকা গাজীপুর, বাংলাদেশ</span>
+                    </p>
+                    <p class="flex items-center mb-2">
+                        <i class="fas fa-phone-alt mr-3"></i>
+                        <span>ফোন: ০১৭১২৩৪৫৬৭৮</span>
+                    </p>
+                    <p class="flex items-center mb-2">
+                        <i class="fas fa-envelope mr-3"></i>
+                        <span>ইমেইল: info@amadarmadrasa.edu.bd</span>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">দ্রুত লিঙ্ক</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-secondary flex items-center"><i class="fas fa-chevron-right mr-2 text-sm"></i> হোম</a></li>
+                        <li><a href="about.html" class="hover:text-secondary flex items-center"><i class="fas fa-chevron-right mr-2 text-sm"></i> আমাদের ইতিহাস</a></li>
+                        <li><a href="admission.html" class="hover:text-secondary flex items-center"><i class="fas fa-chevron-right mr-2 text-sm"></i> ভর্তি তথ্য</a></li>
+                        <li><a href="contact.html" class="hover:text-secondary flex items-center"><i class="fas fa-chevron-right mr-2 text-sm"></i> যোগাযোগ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center">
+                <p>&copy; ২০২৫ আমাদের মাদ্রাসা। সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                // Change icon based on menu state
+                const icon = menuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

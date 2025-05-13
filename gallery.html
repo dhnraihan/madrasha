@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>গ্যালারি - আমাদের মাদ্রাসা</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#005e54',
+                        secondary: '#d4a017',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google Fonts - Hind Siliguri -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-['Hind_Siliguri']">
+    <header class="bg-primary text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="logo">
+                <h1 class="text-2xl font-bold">আমাদের মাদ্রাসা</h1>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-secondary font-medium">হোম</a></li>
+                    <li><a href="about.html" class="hover:text-secondary font-medium">আমাদের ইতিহাস</a></li>
+                    <li><a href="gallery.html" class="active text-secondary font-medium">গ্যালারি</a></li>
+                    <li><a href="admission.html" class="hover:text-secondary font-medium">ভর্তি তথ্য</a></li>
+                    <li><a href="teachers.html" class="hover:text-secondary font-medium">শিক্ষকবৃন্দ</a></li>
+                    <li><a href="contact.html" class="hover:text-secondary font-medium">যোগাযোগ</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden bg-primary/95 w-full absolute top-[72px] left-0 p-4 shadow-lg md:hidden">
+            <ul class="space-y-4">
+                <li><a href="index.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">হোম</a></li>
+                <li><a href="about.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">আমাদের ইতিহাস</a></li>
+                <li><a href="gallery.html" class="block py-2 px-4 bg-primary/50 rounded text-secondary font-medium">গ্যালারি</a></li>
+                <li><a href="admission.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">ভর্তি তথ্য</a></li>
+                <li><a href="teachers.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">শিক্ষকবৃন্দ</a></li>
+                <li><a href="contact.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">যোগাযোগ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="bg-cover bg-center py-12" style="background-image: url('assets/images/bg.jpg');">
+        <div class="bg-gray-500 bg-opacity-25 backdrop-blur-sm container mx-auto px-4 w-full py-2 rounded-lg shadow-lg">
+            <h2 class="text-4xl font-bold text-white text-center text-primary mb-6">গ্যালারি</h2>
+            <p class="text-center text-white max-w-2xl mx-auto mb-8">আমাদের মাদ্রাসার ক্যাম্পাস, ক্লাসরুম এবং বিভিন্ন অনুষ্ঠানের ছবি দেখুন। আমরা শিক্ষার্থীদের জন্য একটি সমৃদ্ধ ও আনন্দদায়ক পরিবেশ নিশ্চিত করি।</p>
+        </div>
+    </div>
+
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center mb-10">
+                <div class="inline-flex bg-gray-200 p-1 rounded-lg overflow-hidden">
+                    <button class="filter-btn px-5 py-2 rounded-md font-medium transition duration-300 bg-primary text-white" data-filter="all">সবগুলো</button>
+                    <button class="filter-btn px-5 py-2 rounded-md font-medium transition duration-300 hover:bg-primary hover:text-white" data-filter="campus">ক্যাম্পাস</button>
+                    <button class="filter-btn px-5 py-2 rounded-md font-medium transition duration-300 hover:bg-primary hover:text-white" data-filter="classroom">ক্লাসরুম</button>
+                    <button class="filter-btn px-5 py-2 rounded-md font-medium transition duration-300 hover:bg-primary hover:text-white" data-filter="event">অনুষ্ঠান</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gallery-container">
+                <div class="gallery-item group overflow-hidden rounded-lg shadow-lg relative" data-category="campus">
+                    <img src="https://images.unsplash.com/photo-1519817914152-22d216bb9170?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="ক্যাম্পাস ১" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-100 transition duration-300">
+                        <h3 class="text-white text-xl font-bold">মাদ্রাসা প্রধান গেইট</h3>
+                    </div>
+                </div>
+                <div class="gallery-item group overflow-hidden rounded-lg shadow-lg relative" data-category="campus">
+                    <img src="assets/images/st1.jpg" alt="ক্যাম্পাস ২" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-100 transition duration-300">
+                        <h3 class="text-white text-xl font-bold">মাদ্রাসা মসজিদ</h3>
+                    </div>
+                </div>
+                <div class="gallery-item group overflow-hidden rounded-lg shadow-lg relative" data-category="classroom">
+                    <img src="assets/images/child.webp" alt="ক্লাসরুম ১" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-100 transition duration-300">
+                        <h3 class="text-white text-xl font-bold">আধুনিক ক্লাসরুম</h3>
+                    </div>
+                </div>
+                <div class="gallery-item group overflow-hidden rounded-lg shadow-lg relative" data-category="classroom">
+                    <img src="https://images.unsplash.com/photo-1610513320995-1ad4bbf25e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="ক্লাসরুম ২" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-100 transition duration-300">
+                        <h3 class="text-white text-xl font-bold">কম্পিউটার ল্যাব</h3>
+                    </div>
+                </div>
+                <div class="gallery-item group overflow-hidden rounded-lg shadow-lg relative" data-category="event">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="অনুষ্ঠান ১" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-100 transition duration-300">
+                        <h3 class="text-white text-xl font-bold">বার্ষিক অনুষ্ঠান ২০২৩</h3>
+                    </div>
+                </div>
+                <div class="gallery-item group overflow-hidden rounded-lg shadow-lg relative" data-category="event">
+                    <img src="assets/images/st.jpg" alt="অনুষ্ঠান ২" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-100 transition duration-300">
+                        <h3 class="text-white text-xl font-bold">মিলাদ মাহফিল</h3>
+                    </div>
+                </div>
+                <div class="gallery-item group overflow-hidden rounded-lg shadow-lg relative" data-category="event">
+                    <img src="https://images.unsplash.com/photo-1563089145-599997674d42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="অনুষ্ঠান ৩" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-100 transition duration-300">
+                        <h3 class="text-white text-xl font-bold">কুরআন প্রতিযোগিতা</h3>
+                    </div>
+                </div>
+                <div class="gallery-item group overflow-hidden rounded-lg shadow-lg relative" data-category="campus">
+                    <img src="https://images.unsplash.com/photo-1577896851674-2d9f7029d660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="ক্যাম্পাস ৩" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-100 transition duration-300">
+                        <h3 class="text-white text-xl font-bold">লাইব্রেরি</h3>
+                    </div>
+                </div>
+                <div class="gallery-item group overflow-hidden rounded-lg shadow-lg relative" data-category="classroom">
+                    <img src="https://images.unsplash.com/photo-1602615576820-ea14cf3e476a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="ক্লাসরুম ৩" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-100 transition duration-300">
+                        <h3 class="text-white text-xl font-bold">হিফজ ক্লাস</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white pt-16 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">আমাদের মাদ্রাসা</h3>
+                    <p class="mb-4">একটি আধুনিক ইসলামিক শিক্ষা প্রতিষ্ঠান যেখানে ধর্মীয় ও আধুনিক শিক্ষা একসাথে প্রদান করা হয়।</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-secondary"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-secondary"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-white hover:text-secondary"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">যোগাযোগ</h3>
+                    <p class="flex items-start mb-2">
+                        <i class="fas fa-map-marker-alt mr-3 mt-1"></i>
+                        <span>ঠিকানা: পুনসহি কালিয়া পাড়ারা, ঢাকা গাজীপুর, বাংলাদেশ</span>
+                    </p>
+                    <p class="flex items-center mb-2">
+                        <i class="fas fa-phone-alt mr-3"></i>
+                        <span>ফোন: ০১৭১২৩৪৫৬৭৮</span>
+                    </p>
+                    <p class="flex items-center mb-2">
+                        <i class="fas fa-envelope mr-3"></i>
+                        <span>ইমেইল: info@amadarmadrasa.edu.bd</span>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">দ্রুত লিঙ্ক</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-secondary flex items-center"><i class="fas fa-chevron-right mr-2 text-sm"></i> হোম</a></li>
+                        <li><a href="about.html" class="hover:text-secondary flex items-center"><i class="fas fa-chevron-right mr-2 text-sm"></i> আমাদের ইতিহাস</a></li>
+                        <li><a href="admission.html" class="hover:text-secondary flex items-center"><i class="fas fa-chevron-right mr-2 text-sm"></i> ভর্তি তথ্য</a></li>
+                        <li><a href="contact.html" class="hover:text-secondary flex items-center"><i class="fas fa-chevron-right mr-2 text-sm"></i> যোগাযোগ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center">
+                <p>&copy; ২০২৫ আমাদের মাদ্রাসা। সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gallery Filter System
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(btn => {
+                        btn.classList.remove('bg-primary', 'text-white');
+                    });
+                    
+                    // Add active class to clicked button
+                    this.classList.add('bg-primary', 'text-white');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    galleryItems.forEach(item => {
+                        if(filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Mobile Menu Toggle
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                // Change icon based on menu state
+                const icon = menuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

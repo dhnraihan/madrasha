@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>শিক্ষকবৃন্দ - আমাদের মাদ্রাসা</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#005e54',
+                        secondary: '#d4a017',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google Fonts - Hind Siliguri -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-['Hind_Siliguri']">
+    <header class="bg-primary text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="logo">
+                <h1 class="text-2xl font-bold">আমাদের মাদ্রাসা</h1>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-secondary font-medium">হোম</a></li>
+                    <li><a href="about.html" class="hover:text-secondary font-medium">আমাদের ইতিহাস</a></li>
+                    <li><a href="gallery.html" class="hover:text-secondary font-medium">গ্যালারি</a></li>
+                    <li><a href="admission.html" class="hover:text-secondary font-medium">ভর্তি তথ্য</a></li>
+                    <li><a href="teachers.html" class="active text-secondary font-medium">শিক্ষকবৃন্দ</a></li>
+                    <li><a href="contact.html" class="hover:text-secondary font-medium">যোগাযোগ</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden bg-primary/95 w-full absolute top-[72px] left-0 p-4 shadow-lg md:hidden">
+            <ul class="space-y-4">
+                <li><a href="index.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">হোম</a></li>
+                <li><a href="about.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">আমাদের ইতিহাস</a></li>
+                <li><a href="gallery.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">গ্যালারি</a></li>
+                <li><a href="admission.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">ভর্তি তথ্য</a></li>
+                <li><a href="teachers.html" class="block py-2 px-4 bg-primary/50 rounded text-secondary font-medium">শিক্ষকবৃন্দ</a></li>
+                <li><a href="contact.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">যোগাযোগ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="bg-cover bg-center py-12" style="background-image: url('assets/images/bg.jpg');">
+        <div class="bg-gray-500 bg-opacity-25 backdrop-blur-sm container mx-auto px-4 w-full py-2 rounded-lg shadow-lg">
+            <h2 class="text-4xl text-white font-bold text-center text-primary mb-6">শিক্ষকবৃন্দ</h2>
+            <p class="text-center text-white max-w-2xl mx-auto mb-8">আমাদের মাদ্রাসায় অভিজ্ঞ ও যোগ্যতাসম্পন্ন শিক্ষকবৃন্দ রয়েছেন যারা ছাত্র-ছাত্রীদের শিক্ষাদান করে থাকেন। তাদের সম্পর্কে বিস্তারিত জানুন।</p>
+        </div>
+    </div>
+
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <!-- প্রিন্সিপাল -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-center text-primary mb-8 flex items-center justify-center">
+                    <i class="fas fa-user-tie text-secondary mr-3"></i>
+                    প্রিন্সিপাল
+                </h3>
+                <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-1/3">
+                            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="প্রিন্সিপাল" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 md:w-2/3">
+                            <div class="uppercase tracking-wide text-secondary font-semibold">প্রিন্সিপাল</div>
+                            <h2 class="mt-1 text-2xl font-bold text-primary">মাওলানা আবদুল করিম</h2>
+                            <div class="mt-4 space-y-3">
+                                <p class="flex items-center text-gray-700">
+                                    <i class="fas fa-graduation-cap text-secondary mr-3"></i>
+                                    <span>দাওরায়ে হাদীস, আল-আজহার বিশ্ববিদ্যালয় থেকে ইসলামিক স্টাডিজে পিএইচডি</span>
+                                </p>
+                                <p class="flex items-center text-gray-700">
+                                    <i class="fas fa-history text-secondary mr-3"></i>
+                                    <span>অভিজ্ঞতা: ২৫+ বছর</span>
+                                </p>
+                                <p class="flex items-center text-gray-700">
+                                    <i class="fas fa-envelope text-secondary mr-3"></i>
+                                    <span>ইমেইল: principal@amadarmadrasa.edu.bd</span>
+                                </p>
+                                <div class="pt-4">
+                                    <p class="text-gray-700">প্রিন্সিপাল মাওলানা আবদুল করিম সাহেব ২৫ বছরেরও বেশি সময় ধরে ইসলামিক শিক্ষা ক্ষেত্রে অবদান রেখে চলেছেন। তিনি বিশ্বের অন্যতম সম্মানীয় আল-আজহার বিশ্ববিদ্যালয় থেকে পিএইচডি ডিগ্রি অর্জন করেছেন এবং দেশের বিভিন্ন প্রতিষ্ঠানে নেতৃত্ব দিয়েছেন।</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- বিভাগীয় প্রধানগণ -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-center text-primary mb-8 flex items-center justify-center">
+                    <i class="fas fa-chalkboard-teacher text-secondary mr-3"></i>
+                    বিভাগীয় প্রধানগণ
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                        <div class="h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1563807894768-f28bee0d37b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="শিক্ষক ১" class="w-full h-full object-cover transition duration-300 transform hover:scale-110">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-2">
+                                <span class="px-2 py-1 bg-primary text-white text-xs rounded-full mr-2">হিফজ বিভাগ</span>
+                                <span class="text-sm text-gray-600">১৮ বছর</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-primary mb-2">মাওলানা রফিকুল ইসলাম</h4>
+                            <p class="text-gray-700 mb-3 text-sm">দাওরায়ে হাদীস, কুরআন হিফজ</p>
+                            <p class="text-gray-700 flex items-center text-sm">
+                                <i class="fas fa-envelope text-secondary mr-2"></i>
+                                <span>rafiq@amadarmadrasa.edu.bd</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                        <div class="h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80" alt="শিক্ষক ২" class="w-full h-full object-cover transition duration-300 transform hover:scale-110">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-2">
+                                <span class="px-2 py-1 bg-primary text-white text-xs rounded-full mr-2">ইবতেদায়ী বিভাগ</span>
+                                <span class="text-sm text-gray-600">১৫ বছর</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-primary mb-2">মাওলানা আব্দুল্লাহ</h4>
+                            <p class="text-gray-700 mb-3 text-sm">দাওরায়ে হাদীস, ইসলামিক এডুকেশনে এমএ</p>
+                            <p class="text-gray-700 flex items-center text-sm">
+                                <i class="fas fa-envelope text-secondary mr-2"></i>
+                                <span>abdullah@amadarmadrasa.edu.bd</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                        <div class="h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" alt="শিক্ষক ৩" class="w-full h-full object-cover transition duration-300 transform hover:scale-110">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-2">
+                                <span class="px-2 py-1 bg-primary text-white text-xs rounded-full mr-2">দাখিল বিভাগ</span>
+                                <span class="text-sm text-gray-600">১২ বছর</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-primary mb-2">মাওলানা মোহাম্মদ আলী</h4>
+                            <p class="text-gray-700 mb-3 text-sm">দাওরায়ে হাদীস, আরবি ভাষায় এমএ</p>
+                            <p class="text-gray-700 flex items-center text-sm">
+                                <i class="fas fa-envelope text-secondary mr-2"></i>
+                                <span>ali@amadarmadrasa.edu.bd</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                        <div class="h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="শিক্ষক ৪" class="w-full h-full object-cover transition duration-300 transform hover:scale-110">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-2">
+                                <span class="px-2 py-1 bg-primary text-white text-xs rounded-full mr-2">আলিম বিভাগ</span>
+                                <span class="text-sm text-gray-600">২০ বছর</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-primary mb-2">ড. নূরুল হক</h4>
+                            <p class="text-gray-700 mb-3 text-sm">দাওরায়ে হাদীস, ইসলামিক ফিলোসফিতে পিএইচডি</p>
+                            <p class="text-gray-700 flex items-center text-sm">
+                                <i class="fas fa-envelope text-secondary mr-2"></i>
+                                <span>nurul@amadarmadrasa.edu.bd</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- বিষয় শিক্ষকগণ -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-center text-primary mb-8 flex items-center justify-center">
+                    <i class="fas fa-book-reader text-secondary mr-3"></i>
+                    বিষয় শিক্ষকগণ
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden flex hover:shadow-lg transition duration-300">
+                        <div class="w-1/3 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1480429370139-e0132c086e2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1888&q=80" alt="শিক্ষক ৫" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-2/3 p-5">
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full mb-2 inline-block">হাদীস শিক্ষক</span>
+                            <h4 class="text-lg font-bold text-primary mb-1">মাওলানা আবু বকর</h4>
+                            <p class="text-gray-700 text-sm mb-1">দাওরায়ে হাদীস</p>
+                            <p class="text-gray-600 text-sm flex items-center">
+                                <i class="fas fa-history text-secondary mr-2"></i>
+                                <span>অভিজ্ঞতা: ১০ বছর</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden flex hover:shadow-lg transition duration-300">
+                        <div class="w-1/3 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" alt="শিক্ষক ৬" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-2/3 p-5">
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full mb-2 inline-block">ফিকাহ শিক্ষক</span>
+                            <h4 class="text-lg font-bold text-primary mb-1">মাওলানা ওমর ফারুক</h4>
+                            <p class="text-gray-700 text-sm mb-1">দাওরায়ে হাদীস, ফিকাহ বিশেষজ্ঞ</p>
+                            <p class="text-gray-600 text-sm flex items-center">
+                                <i class="fas fa-history text-secondary mr-2"></i>
+                                <span>অভিজ্ঞতা: ৮ বছর</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden flex hover:shadow-lg transition duration-300">
+                        <div class="w-1/3 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="শিক্ষক ৭" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-2/3 p-5">
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full mb-2 inline-block">বাংলা শিক্ষক</span>
+                            <h4 class="text-lg font-bold text-primary mb-1">জনাব শাহজাহান আলী</h4>
+                            <p class="text-gray-700 text-sm mb-1">বাংলায় এমএ, বিএড</p>
+                            <p class="text-gray-600 text-sm flex items-center">
+                                <i class="fas fa-history text-secondary mr-2"></i>
+                                <span>অভিজ্ঞতা: ১২ বছর</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden flex hover:shadow-lg transition duration-300">
+                        <div class="w-1/3 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" alt="শিক্ষক ৮" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-2/3 p-5">
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full mb-2 inline-block">ইংরেজি শিক্ষক</span>
+                            <h4 class="text-lg font-bold text-primary mb-1">জনাব আহমেদ হোসেন</h4>
+                            <p class="text-gray-700 text-sm mb-1">ইংরেজিতে এমএ, টেসল</p>
+                            <p class="text-gray-600 text-sm flex items-center">
+                                <i class="fas fa-history text-secondary mr-2"></i>
+                                <span>অভিজ্ঞতা: ৭ বছর</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden flex hover:shadow-lg transition duration-300">
+                        <div class="w-1/3 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1581391528803-54be77ce23e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" alt="শিক্ষক ৯" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-2/3 p-5">
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full mb-2 inline-block">গণিত শিক্ষক</span>
+                            <h4 class="text-lg font-bold text-primary mb-1">জনাব আব্দুর রহমান</h4>
+                            <p class="text-gray-700 text-sm mb-1">গণিতে এমএসসি</p>
+                            <p class="text-gray-600 text-sm flex items-center">
+                                <i class="fas fa-history text-secondary mr-2"></i>
+                                <span>অভিজ্ঞতা: ৯ বছর</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden flex hover:shadow-lg transition duration-300">
+                        <div class="w-1/3 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" alt="শিক্ষক ১০" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-2/3 p-5">
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full mb-2 inline-block">কম্পিউটার শিক্ষক</span>
+                            <h4 class="text-lg font-bold text-primary mb-1">জনাব মোস্তাফিজুর রহমান</h4>
+                            <p class="text-gray-700 text-sm mb-1">কম্পিউটার সায়েন্সে এমএসসি</p>
+                            <p class="text-gray-600 text-sm flex items-center">
+                                <i class="fas fa-history text-secondary mr-2"></i>
+                                <span>অভিজ্ঞতা: ৫ বছর</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- আমাদের সাথে যোগ দিন -->
+            <div class="bg-primary text-white p-10 rounded-xl">
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold mb-4">আমাদের সাথে যোগ দিন</h3>
+                    <p class="text-white/80 mb-6 max-w-2xl mx-auto">আমাদের শিক্ষক দলে যোগ দিতে আগ্রহী? আপনার সিভি পাঠান আমাদের ইমেইল ঠিকানায়। আমরা যোগ্যতাসম্পন্ন প্রার্থীদের সাথে যোগাযোগ করব।</p>
+                    <a href="mailto:careers@amadarmadrasa.edu.bd" class="inline-block bg-white text-primary hover:bg-secondary hover:text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                        <i class="fas fa-envelope mr-2"></i> careers@amadarmadrasa.edu.bd
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white pt-16 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">আমাদের মাদ্রাসা</h3>
+                    <p class="mb-4">একটি আধুনিক ইসলামিক শিক্ষা প্রতিষ্ঠান যেখানে ধর্মীয় ও আধুনিক শিক্ষা একসাথে প্রদান করা হয়।</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-secondary"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-secondary"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-white hover:text-secondary"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">যোগাযোগ</h3>
+                    <p class="flex items-start mb-2">
+                        <i class="fas fa-map-marker-alt mr-3 mt-1"></i>
+                        <span>ঠিকানা: পুনসহি কালিয়া পাড়ারা, ঢাকা গাজীপুর, বাংলাদেশ</span>
+                    </p>
+                    <p class="flex items-center mb-2">
+                        <i class="fas fa-phone-alt mr-3"></i>
+                        <span>ফোন: ০১৭১২৩৪৫৬৭৮</span>
+                    </p>
+                    <p class="flex items-center mb-2">
+                        <i class="fas fa-envelope mr-3"></i>
+                        <span>ইমেইল: info@amadarmadrasa.edu.bd</span>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">দ্রুত লিঙ্ক</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-secondary flex items-center"><i class="fas fa-chevron-right mr-2 text-sm"></i> হোম</a></li>
+                        <li><a href="about.html" class="hover:text-secondary flex items-center"><i class="fas fa-chevron-right mr-2 text-sm"></i> আমাদের ইতিহাস</a></li>
+                        <li><a href="admission.html" class="hover:text-secondary flex items-center"><i class="fas fa-chevron-right mr-2 text-sm"></i> ভর্তি তথ্য</a></li>
+                        <li><a href="contact.html" class="hover:text-secondary flex items-center"><i class="fas fa-chevron-right mr-2 text-sm"></i> যোগাযোগ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center">
+                <p>&copy; ২০২৫ আমাদের মাদ্রাসা। সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                // Change icon based on menu state
+                const icon = menuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

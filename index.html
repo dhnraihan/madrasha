@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আমাদের মাদ্রাসা - হোমপেজ</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#005e54',
+                        secondary: '#d4a017',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google Fonts - Hind Siliguri -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-animate {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="font-['Hind_Siliguri']">
+    <header class="bg-primary text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="logo">
+                <h1 class="text-2xl font-bold">আমাদের মাদ্রাসা</h1>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="active text-secondary font-medium">হোম</a></li>
+                    <li><a href="about.html" class="hover:text-secondary font-medium">আমাদের ইতিহাস</a></li>
+                    <li><a href="gallery.html" class="hover:text-secondary font-medium">গ্যালারি</a></li>
+                    <li><a href="admission.html" class="hover:text-secondary font-medium">ভর্তি তথ্য</a></li>
+                    <li><a href="teachers.html" class="hover:text-secondary font-medium">শিক্ষকবৃন্দ</a></li>
+                    <li><a href="contact.html" class="hover:text-secondary font-medium">যোগাযোগ</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden bg-primary/95 w-full absolute top-[72px] left-0 p-4 shadow-lg md:hidden">
+            <ul class="space-y-4">
+                <li><a href="index.html" class="block py-2 px-4 bg-primary/50 rounded text-secondary font-medium">হোম</a></li>
+                <li><a href="about.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">আমাদের ইতিহাস</a></li>
+                <li><a href="gallery.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">গ্যালারি</a></li>
+                <li><a href="admission.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">ভর্তি তথ্য</a></li>
+                <li><a href="teachers.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">শিক্ষকবৃন্দ</a></li>
+                <li><a href="contact.html" class="block py-2 px-4 hover:bg-primary/50 rounded hover:text-secondary font-medium">যোগাযোগ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Enhanced Hero Section -->
+    <div class="hero-section relative h-screen max-h-[800px] overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-primary/30 z-10"></div>
+        <img src="assets/images/child.webp" 
+            alt="মাদ্রাসা ক্যাম্পাস" 
+            class="absolute inset-0 w-full h-full object-cover object-center" />
+        
+        <!-- Hero Content -->
+        <div class="container mx-auto px-4 h-full relative z-20">
+            <div class="flex flex-col items-center justify-center h-full text-white text-center">
+                <h1 class="hero-animate text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">
+                    <span class="text-secondary">আমাদের মাদ্রাসায়</span> আপনাকে স্বাগতম
+                </h1>
+                <div class="w-24 h-1 bg-secondary mb-8 hero-animate" style="animation-delay: 0.3s"></div>
+                <p class="hero-animate text-lg md:text-xl max-w-2xl mb-10 leading-relaxed drop-shadow-md" style="animation-delay: 0.6s">
+                    আমরা একটি আধুনিক ইসলামিক শিক্ষা প্রতিষ্ঠান যেখানে ধর্মীয় শিক্ষার পাশাপাশি আধুনিক শিক্ষাও প্রদান করা হয়। আমাদের লক্ষ্য একজন মুসলিম ছাত্রকে যোগ্য নাগরিক হিসেবে গড়ে তোলা।
+                </p>
+                <div class="hero-animate flex flex-wrap gap-4 justify-center" style="animation-delay: 0.9s">
+                    <a href="admission.html" class="bg-secondary hover:bg-white text-white hover:text-primary font-bold py-3 px-8 rounded-md transition duration-300 transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-user-plus mr-2"></i>ভর্তি তথ্য
+                    </a>
+                    <a href="about.html" class="bg-transparent border-2 border-white hover:bg-white text-white hover:text-primary font-bold py-3 px-8 rounded-md transition duration-300 transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-info-circle mr-2"></i>আমাদের সম্পর্কে
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+            <a href="#features" class="text-white opacity-80 hover:opacity-100 transition-opacity">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </div>
+
+    <section id="features" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">আমাদের বৈশিষ্ট্য</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-book-open"></i></div>
+                    <h3 class="text-xl font-bold text-primary mb-3">উন্নত শিক্ষা ব্যবস্থা</h3>
+                    <p>আমাদের মাদ্রাসায় আধুনিক শিক্ষাক্রমের পাশাপাশি ইসলামিক শিক্ষা প্রদান করা হয়। আমরা সবসময় আধুনিক পদ্ধতিতে শিক্ষাদান করি।</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-user-tie"></i></div>
+                    <h3 class="text-xl font-bold text-primary mb-3">অভিজ্ঞ শিক্ষকমন্ডলী</h3>
+                    <p>অভিজ্ঞ ও দক্ষ শিক্ষকদের মাধ্যমে শিক্ষাদান করা হয়। আমাদের শিক্ষকগণ বিভিন্ন বিশ্ববিদ্যালয় থেকে ডিগ্রিধারী।</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg transform transition duration-300 hover:-translate-y-2">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-laptop"></i></div>
+                    <h3 class="text-xl font-bold text-primary mb-3">আধুনিক সুযোগ-সুবিধা</h3>
+                    <p>ডিজিটাল ক্লাসরুম, লাইব্রেরি, ও ল্যাবরেটরি সুবিধা রয়েছে। শিক্ষার্থীদের জন্য সকল প্রকার আধুনিক সুযোগ-সুবিধা রয়েছে।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">আমাদের প্রোগ্রামসমূহ</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1602615576820-ea14cf3e476a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="হিফজ বিভাগ" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-primary mb-2">হিফজ বিভাগ</h3>
+                        <p class="mb-3">মাদ্রাসার হিফজ বিভাগে ছাত্র-ছাত্রীদের কুরআন শরীফ হিফজ করানো হয়।</p>
+                        <a href="admission.html" class="text-secondary font-bold hover:underline">আরও জানুন <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1602615576820-ea14cf3e476a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="ইবতেদায়ী বিভাগ" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-primary mb-2">ইবতেদায়ী বিভাগ</h3>
+                        <p class="mb-3">প্রাথমিক পর্যায়ের ছাত্র-ছাত্রীদের ইসলামি শিক্ষা প্রদান করা হয়।</p>
+                        <a href="admission.html" class="text-secondary font-bold hover:underline">আরও জানুন <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1602615576820-ea14cf3e476a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="দাখিল বিভাগ" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-primary mb-2">দাখিল বিভাগ</h3>
+                        <p class="mb-3">মাধ্যমিক পর্যায়ের ইসলামি শিক্ষা প্রদান করা হয়।</p>
+                        <a href="admission.html" class="text-secondary font-bold hover:underline">আরও জানুন <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1602615576820-ea14cf3e476a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="আলিম বিভাগ" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-primary mb-2">আলিম বিভাগ</h3>
+                        <p class="mb-3">উচ্চ মাধ্যমিক পর্যায়ের ইসলামি শিক্ষা প্রদান করা হয়।</p>
+                        <a href="admission.html" class="text-secondary font-bold hover:underline">আরও জানুন <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">সাম্প্রতিক খবর</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary text-white rounded-lg p-3 mr-4">
+                            <i class="fas fa-calendar-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">বার্ষিক পরীক্ষা সূচি প্রকাশিত</h3>
+                            <p class="text-gray-500">১৫ আগস্ট, ২০২৪</p>
+                        </div>
+                    </div>
+                    <p class="mb-4">আগামী মাসে অনুষ্ঠিতব্য বার্ষিক পরীক্ষার সূচি প্রকাশিত হয়েছে। সকল ছাত্র-ছাত্রীদের পরীক্ষার প্রস্তুতি নিতে অনুরোধ করা হচ্ছে।</p>
+                    <a href="#" class="text-secondary font-bold flex items-center hover:underline">বিস্তারিত 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary text-white rounded-lg p-3 mr-4">
+                            <i class="fas fa-mosque text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">মিলাদ মাহফিল অনুষ্ঠিত</h3>
+                            <p class="text-gray-500">১০ আগস্ট, ২০২৪</p>
+                        </div>
+                    </div>
+                    <p class="mb-4">গত সপ্তাহে আমাদের মাদ্রাসায় মিলাদ মাহফিল অনুষ্ঠিত হয়েছে। অনুষ্ঠানে অনেক বিশিষ্ট আলেম উলামা উপস্থিত ছিলেন।</p>
+                    <a href="#" class="text-secondary font-bold flex items-center hover:underline">বিস্তারিত 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">আজই আমাদের সাথে যোগাযোগ করুন</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">আপনার সন্তানের উজ্জ্বল ভবিষ্যতের জন্য আমাদের মাদ্রাসায় ভর্তি করুন। আমরা ধর্মীয় ও আধুনিক শিক্ষায় শিক্ষিত করে আদর্শ নাগরিক হিসেবে গড়ে তুলব।</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="contact.html" class="bg-white text-primary hover:bg-secondary hover:text-white font-bold py-3 px-6 rounded-md transition duration-300">যোগাযোগ করুন</a>
+                <a href="admission.html" class="bg-secondary text-white hover:bg-white hover:text-primary font-bold py-3 px-6 rounded-md transition duration-300">ভর্তি হোন</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">আমাদের গ্যালারি</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-lg h-64">
+                    <img src="https://images.unsplash.com/photo-1519817914152-22d216bb9170?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="মাদ্রাসা ক্যাম্পাস" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg h-64">
+                    <img src="assets/images/st.jpg" alt="মসজিদ" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg h-64">
+                    <img src="https://images.unsplash.com/photo-1563089145-599997674d42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="কুরআন তেলাওয়াত" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg h-64">
+                    <img src="assets/images/st1.jpg" alt="ক্লাসরুম" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="gallery.html" class="bg-primary hover:bg-secondary text-white font-bold py-2 px-6 rounded-md inline-block transition duration-300">আরও দেখুন</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white pt-16 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">আমাদের মাদ্রাসা</h3>
+                    <p class="mb-4">একটি আধুনিক ইসলামিক শিক্ষা প্রতিষ্ঠান যেখানে ধর্মীয় ও আধুনিক শিক্ষা একসাথে প্রদান করা হয়।</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-secondary"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-secondary"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-white hover:text-secondary"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">যোগাযোগ</h3>
+                    <p class="flex items-start mb-2">
+                        <i class="fas fa-map-marker-alt mr-3 mt-1"></i>
+                        <span>ঠিকানা: পুনসহি কালিয়া পাড়ারা, ঢাকা গাজীপুর, বাংলাদেশ</span>
+                    </p>
+                    <p class="flex items-center mb-2">
+                        <i class="fas fa-phone-alt mr-3"></i>
+                        <span>ফোন: ০১৭১২৩৪৫৬৭৮</span>
+                    </p>
+                    <p class="flex items-center mb-2">
+                        <i class="fas fa-envelope mr-3"></i>
+                        <span>ইমেইল: info@amadarmadrasa.edu.bd</span>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">দ্রুত লিঙ্ক</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-secondary flex items-center"><i class="fas fa-chevron-right mr-2 text-sm"></i> হোম</a></li>
+                        <li><a href="about.html" class="hover:text-secondary flex items-center"><i class="fas fa-chevron-right mr-2 text-sm"></i> আমাদের ইতিহাস</a></li>
+                        <li><a href="admission.html" class="hover:text-secondary flex items-center"><i class="fas fa-chevron-right mr-2 text-sm"></i> ভর্তি তথ্য</a></li>
+                        <li><a href="contact.html" class="hover:text-secondary flex items-center"><i class="fas fa-chevron-right mr-2 text-sm"></i> যোগাযোগ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center">
+                <p>&copy; ২০২৫ আমাদের মাদ্রাসা। সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                // Change icon based on menu state
+                const icon = menuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
